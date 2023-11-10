@@ -6,25 +6,23 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:31:46 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/06 16:49:07 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/10 16:24:53 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h>
+//#include <stdlib.h>
+//#include <stdio.h>
+//#include <stddef.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
+	char			*sub;
 	unsigned int	i;
 
 	i = 0;
-	if (start >= ft_strlen(s))
-		return (NULL);
-	sub = malloc(sizeof(char) * (len + 1));
-	if (sub == NULL)
+	sub = (char *)malloc(len + 1);
+	if (sub == NULL || start >= ft_strlen(s))
 		return (NULL);
 	while (i < len && *s)
 	{
@@ -36,17 +34,32 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-int	main(void)
-{
-	char	*sub;
-	int	i;
+/*int main(void) {
+    // 测试正常情况
+    char str[] = "Hello, World!";
+    char *result = ft_substr(str, 7, 5);
+    printf("Test 1: Result: %s\n", result);
+    free(result);
 
-	i = 0;
-	sub = ft_substr("abcdef", 1, 4);
-	while (*sub)
-	{
-		printf("%c\n", sub[i]);
-		i ++;
-	}
-	return (0);
-}
+    // 测试超出字符串长度
+    result = ft_substr(str, 15, 5);
+    printf("Test 2: Result: %s\n", result);
+    free(result);
+
+    // 测试空字符串
+    result = ft_substr("", 0, 3);
+    printf("Test 3: Result: %s\n", result);
+    free(result);
+
+    // 测试从字符串中间开始
+    result = ft_substr(str, 6, 7);
+    printf("Test 4: Result: %s\n", result);
+    free(result);
+
+    // 测试空字符串和超出范围
+    result = ft_substr("", 2, 5);
+    printf("Test 5: Result: %s\n", result);
+    free(result);
+
+    return 0;
+}*/

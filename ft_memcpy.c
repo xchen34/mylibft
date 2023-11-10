@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:48:41 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/08 15:21:37 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/10 15:05:54 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,27 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*int	main() 
-{
+/*int main() {
     char source[] = "Hello, World!";
-    char destination[20];
+    char destination1[20];
+    char destination2[20];
+
+    // 使用你编写的 ft_memcpy 复制数据
+    ft_memcpy(destination1, source, strlen(source) + 1);
 
     // 使用标准库的 memcpy 复制数据
-    memcpy(destination, source, strlen(source) + 1);
+    memcpy(destination2, source, strlen(source) + 1);
 
     // 打印目标字符串
-    printf("Copied string: %s\n", destination);
+    printf("Copied string using ft_memcpy: %s\n", destination1);
+    printf("Copied string using memcpy: %s\n", destination2);
+
+    // 检查结果是否一致
+    if (strcmp(destination1, destination2) == 0) {
+        printf("Results match.\n");
+    } else {
+        printf("Results do not match.\n");
+    }
 
     return 0;
 }*/

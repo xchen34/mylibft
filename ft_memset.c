@@ -6,11 +6,11 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:24:27 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/07 15:42:48 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/09 13:25:06 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -26,10 +26,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-int	main(void)
+/*int	main(void)
 {
 	unsigned char	s[] = "hello";
 	ft_memset(s, '.', 3);
 	printf("%s\n", s);
 	return (0);
-}
+}*/
