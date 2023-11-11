@@ -1,5 +1,5 @@
 # mylibft
-##Part I functions
+## Part I functions
 
 - ft_isalpha(int c): 检查参数c是否为字母（a-z或A-Z）。
 - ft_isdigit(int c): 检查参数c是否为数字（0-9）。
