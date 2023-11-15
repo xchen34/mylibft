@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 19:45:00 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/09 13:24:14 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:12:14 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 			i --;
 		else
 		{
-			printf("%d\n", i);
+		//	printf("%d\n", i);
 			return ((char *)s + i);
 		}
 	}

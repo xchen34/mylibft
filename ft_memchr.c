@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:25:43 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/09 13:48:14 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:28:06 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //#include <string.h>
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
 

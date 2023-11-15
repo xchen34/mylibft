@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:11:18 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/10 13:56:26 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/15 12:53:34 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_atoi(const char *nptr)
 
 /*int	main(void)
 {
-	char	p[] = "   -174f83648gsd";
+	char	p[] = "   2147483648f83648gsd";
 	printf("atoi returns %d\n", atoi(p));
 	printf("ft_atoi returns%d\n", ft_atoi(p));
 	return 0;
