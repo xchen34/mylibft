@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:31:46 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/13 16:49:29 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/16 18:40:49 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,34 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*sub;
+	size_t	new_len;
+
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+	{
+		sub = ft_calloc(1, sizeof(char));
+		if (!sub)
+			return (NULL);
+	}
+	else
+	{
+		new_len = ft_strlen(s + start);
+		if (!(new_len < len))
+			new_len = len;
+		sub = (char *)malloc((new_len + 1) * sizeof(char));
+		if (!sub)
+			return (NULL);
+		sub[new_len] = 0;
+		while (new_len-- > 0)
+			sub[new_len] = s[start + new_len];
+	}
+	return (sub);
+}
+
+/*char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
 	char			*sub;
 	unsigned int	i;
 
@@ -24,7 +52,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = (char *)malloc(len + 1);
 	if (sub == NULL || start >= ft_strlen(s))
 		return (NULL);
-	while (i < len && *s)
+	while (i < len && s[start])
 	{
 		sub[i] = s[start];
 		i ++;
@@ -32,7 +60,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
-}
+}*/
 
 /*int main(void) {
     // 测试正常情况

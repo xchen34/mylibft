@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:13:39 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/13 14:05:34 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/16 13:24:01 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 	d = (char *)malloc(ft_strlen(s) + 1);
 	if (d == NULL)
 		return (NULL);
-	while (*s)
+	while (s[i])
 	{
 		d[i] = s[i];
 		i ++;

@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:48:41 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/15 19:16:01 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/16 12:11:28 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*p_dest;
 	unsigned char	*p_src;
 
-	if (dest == NULL || src == NULL)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	p_dest = (unsigned char *)dest;
 	p_src = (unsigned char *) src;
