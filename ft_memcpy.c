@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:48:41 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/16 12:11:28 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/20 18:59:28 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,33 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	p_src = (unsigned char *) src;
 	if (n == 0)
 		return (dest);
-	if (p_dest > (p_src + n) || p_src > (p_dest + n))
+	while (n > 0)
 	{
-		while (n > 0)
-		{
-			*p_dest = *p_src;
-			p_dest ++;
-			p_src ++;
-			n --;
-		}
+		*p_dest = *p_src;
+		p_dest ++;
+		p_src ++;
+		n --;
 	}
 	return (dest);
 }
+
+/*void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (!dest && !src)
+		return (NULL);
+	if (dest != src)
+	{
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
+	return (dest);
+}*/
 
 /*int main() {
     char source[] = "Hello, World!";

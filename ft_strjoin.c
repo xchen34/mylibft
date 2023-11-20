@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:26:29 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/13 16:49:45 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/20 16:47:50 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*s3;
 	char	*res;
 
+	if (s2 == NULL)
+		return ((char *)s1);
+	if (s1 == NULL)
+		return (NULL);
 	s3 = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (s3 == NULL)
 		return (NULL);
