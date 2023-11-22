@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 19:24:34 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/08 20:25:07 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:51:54 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (c == '\0')
-		return ((char *)s + ft_strlen(s));
-	while (*s)
+	while ((char)c != *s)
 	{
-		if (*s != (unsigned char)c)
-			s ++;
-		else
-			return ((char *)s);
+		if (*s == '\0')
+			return (NULL);
+		s++;
 	}
-	return (NULL);
+	return ((char *)s);
 }
 
 /*int	main(void)

@@ -6,12 +6,12 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:54:21 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/15 13:50:23 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:08:37 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include"libft.h"
+//#include<stdlib.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:31:46 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/20 20:37:56 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 12:38:12 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,59 +17,51 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*sub;
-	unsigned int	i;
+	char	*s2;
+	size_t	slen;
+	size_t	end;
+
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	end = 0;
+	if (start > slen)
+		return (ft_strdup(""));
+	if (start < slen)
+		end = slen - start;
+	if (end > len)
+		end = len;
+	s2 = (char *)malloc(sizeof(char) * (end + 1));
+	if (!s2)
+		return (0);
+	ft_strlcpy(s2, s + start, end + 1);
+	return (s2);
+}
+
+/*
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*ptr;
+	size_t	i;
+	size_t	len_str;
 
 	i = 0;
 	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
+		return (0);
+	len_str = ft_strlen(s);
+	if (start > len_str)
+		return (ft_strdup(""));
+	if (len_str < len + start)
+		len = len_str - start;
+	ptr = (char *) malloc(len + 1 * sizeof(char));
+	if (!ptr)
+		return (0);
+	while (i < len)
 	{
-		sub = (char *)malloc(sizeof(char) * 1);
-		if (!sub)
-			return (NULL);
-		sub[0] = '\0';
-		return (sub);
+		ptr[i] = s[start + i];
+		i++;
 	}
-	sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (sub == NULL)
-		return (NULL);
-	while (i < len && s[start])
-	{
-		sub[i] = s[start];
-		i ++;
-		start ++;
-	}
-	sub[i] = '\0';
-	return (sub);
-}
-
-/*int main(void) {
-    // 测试正常情况
-    char str[] = "Hello, World!";
-    char *result = ft_substr(str, 7, 5);
-    printf("Test 1: Result: %s\n", result);
-    free(result);
-
-    // 测试超出字符串长度
-    result = ft_substr(str, 15, 5);
-    printf("Test 2: Result: %s\n", result);
-    free(result);
-
-    // 测试空字符串
-    result = ft_substr("", 0, 3);
-    printf("Test 3: Result: %s\n", result);
-    free(result);
-
-    // 测试从字符串中间开始
-    result = ft_substr(str, 6, 7);
-    printf("Test 4: Result: %s\n", result);
-    free(result);
-
-    // 测试空字符串和超出范围
-    result = ft_substr("", 2, 5);
-    printf("Test 5: Result: %s\n", result);
-    free(result);
-
-    return 0;
+	ptr[i] = '\0';
+	return (ptr);
 }*/

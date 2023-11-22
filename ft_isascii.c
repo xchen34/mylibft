@@ -6,11 +6,11 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:06:38 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/06 17:11:02 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:10:24 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+//#include<stdio.h>
 #include "libft.h"
 
 int	ft_isascii(int c)

@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:23:43 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/20 17:17:50 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/21 14:52:58 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	b = (char *)big;
 	i = 0;
 	if (*little == '\0' || little == NULL)
-		return (b);	
+		return (b);
 	if (len == 0)
 		return (NULL);
 	while (b[i] && i < len)

@@ -6,26 +6,22 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 15:48:13 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/17 16:03:26 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/21 18:22:30 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libfth.h"
+#include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*last;
-	size_t	i;
-	
+
 	if (lst == NULL)
 		return (NULL);
 	last = lst;
-	i = ft_lstsize(lst);
-	while (i > 0)
+	while (last->next != NULL)
 	{
-		lst = lst->next;
-		i--;
+		last = last->next;
 	}
-	last = lst;
 	return (last);
 }

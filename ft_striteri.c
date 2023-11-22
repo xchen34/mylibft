@@ -6,13 +6,13 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:28:08 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/15 13:49:14 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:08:01 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include<stdio.h>
 //#include<stdlib.h>
-#include"libft.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

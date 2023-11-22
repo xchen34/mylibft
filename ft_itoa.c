@@ -6,13 +6,13 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:57:34 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/14 19:10:44 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:14:02 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include<stdio.h>
-#include<stdlib.h>
-#include"libft.h"
+//#include<stdlib.h>
+#include "libft.h"
 
 static int	count_len(int long n)
 {
@@ -23,7 +23,7 @@ static int	count_len(int long n)
 	{
 		len++;
 		n = -n;
-	}	
+	}
 	if (n >= 0 && n <= 9)
 	{
 		len++;

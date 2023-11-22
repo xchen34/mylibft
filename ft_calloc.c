@@ -6,7 +6,7 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:58:52 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/20 20:05:02 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/21 14:50:35 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(p, 0, nmemb * size);
 	return (p);
 }
-

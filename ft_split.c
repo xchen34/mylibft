@@ -6,12 +6,12 @@
 /*   By: leochen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:49:20 by leochen           #+#    #+#             */
-/*   Updated: 2023/11/20 16:41:03 by leochen          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:10:54 by leochen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
+//#include<stdio.h>
+//#include<stdlib.h>
 #include "libft.h"
 
 static char	**malloc_fail(char **split, int word)
@@ -37,7 +37,7 @@ static int	count_words(char const *s, char c)
 		{
 			count++;
 			flag = 1;
-		}	
+		}
 		s++;
 	}
 	return (count);
